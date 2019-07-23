@@ -1,6 +1,7 @@
 # bw-sleep-tracker-pt-BE
 
-**Here is a [Link](http://sleep-tracker.surge.sh/)**
+**Here is a [Link](http://sleep-tracker.surge.sh/) to extra documentation for the Sleep Tracker**
+
 ## ENDPOINTS
 
 ### Auth
