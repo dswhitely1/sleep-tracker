@@ -8,6 +8,7 @@ const sleepRoute = require('./routes/sleepRoutes.js');
 const blogRoute = require('./routes/blog.js');
 
 const server = express();
+console.log('Get OUT');
 
 server.use(helm(), express.json(), morg('dev'));
 server.use(
