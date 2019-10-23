@@ -36,7 +36,7 @@ function add_user(user) {
     password: user.password,
     birthdate: user.birthdate
   };
-  return db("users").insert(newUser);
+  return db("users").insert(newUser).returning('*');
 }
 
 async function edit_user(id, user) {

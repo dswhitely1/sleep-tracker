@@ -4,7 +4,12 @@ require("dotenv").config();
 module.exports = {
   development: {
     client: "pg",
-    connection: process.env.HEROKU_POSTGRESQL_GRAY_URL,
+    connection: {
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS
+    },
     ssl: true,
     migrations: {
       directory: "./data/migrations/"

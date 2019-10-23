@@ -233,7 +233,13 @@ async function register(req, res) {
         });
       } else {
         const newUser = await db.add_user(creds);
-        res.status(201).json(newUser);
+        const newUserTemp = {
+          id: newUser[0].id,
+          username: newUser[0].username,
+          role: newUser[0].role,
+          birthdate: newUser[0].birthdate
+        }
+        res.status(201).json(newUserTemp);
       }
     } catch (err) {
       res.status(err);
